@@ -1,7 +1,6 @@
 baseURL = "https://mrnspam.github.io/stm/"
 languageCode = "en-us"
 title = "The Ultimate Stabat Mater Website"
-theme = ""
 
 [params]
   subtitle = "a musical journey through the ages"
