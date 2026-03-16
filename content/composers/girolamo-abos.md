@@ -37,6 +37,7 @@ For all purposes, Abos can be regarded as an Italian composer. He was well known
 <tr><th>Performers</th><td>2 Sopranos, Alto and Orchestra</td></tr>
 <tr><th>Length</th><td>CD 1: 30.41 minutes, CD 2: 23.17 minutes</td></tr>
 <tr><th>Particulars</th><td>The work is divided into six sections, with the final Amen - a fugue - as a separate section. The first stanza reminds me strongly of Pergolesi, even if it is quite different. It is fine music, clearly influenced by his work on operas. What surprises me is the difference in tempo between the two performances.</td></tr>
+<tr><th>Colour bar</th><td><img src="https://stabatmater.info/wp-content/uploads/2014/09/abos-580x147.gif" alt="Colour bar Abos"></td></tr>
 <tr><th>Textual variations</th><td>The "Analecta"-version is used, but with some variations, especially in CD 1.<br>
 - Stanza 4, line 2: Not "Et tremebat cum videbat" but "Pia Mater dum videbat"<br>
 - Stanza 5, line 2: Not "Christi Matrem" but "Matrem Christi"<br>

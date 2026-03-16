@@ -6,19 +6,23 @@
 
   {{ with .Params.cds }}
   <h2>Information about the recording</h2>
-  {{ range . }}
-  <div class="cd-card">
-    <h3>{{ .title }}</h3>
-    {{ with .notes }}<p class="cd-moreinfo">{{ . }}</p>{{ end }}
-    <table class="cd-table">
-      {{ with .orchestra }}<tr><th>Orchestra</th><td>{{ . }}</td></tr>{{ end }}
-      {{ with .choir }}<tr><th>Choir</th><td>{{ . }}</td></tr>{{ end }}
-      {{ with .conductor }}<tr><th>Conductor</th><td>{{ . }}</td></tr>{{ end }}
-      {{ with .soloists }}<tr><th>Soloists</th><td>{{ . }}</td></tr>{{ end }}
-      {{ with .other_works }}<tr><th>Other works</th><td>{{ . }}</td></tr>{{ end }}
-      {{ with .code }}<tr><th>Code</th><td>{{ . }}</td></tr>{{ end }}
-    </table>
-  </div>
+  {{ $totalCDs := len . }}
+  {{ range $i, $cd := . }}
+  <table width="100%">
+    <tbody>
+      <tr>
+        <td width="20%"><strong>{{ if gt $totalCDs 1 }}CD{{ add $i 1 }}{{ else }}CD{{ end }}</strong>: </td>
+        <td>{{ $cd.title }}</td>
+      </tr>
+      {{ with $cd.notes }}<tr><td><strong>More info</strong>: </td><td>{{ . }}</td></tr>{{ end }}
+      {{ with $cd.orchestra }}<tr><td><strong>Orchestra</strong>: </td><td>{{ . }}</td></tr>{{ end }}
+      {{ with $cd.choir }}<tr><td><strong>Choir</strong>: </td><td>{{ . }}</td></tr>{{ end }}
+      {{ with $cd.conductor }}<tr><td><strong>Conductor</strong>: </td><td>{{ . }}</td></tr>{{ end }}
+      {{ with $cd.soloists }}<tr><td><strong>Soloists</strong>: </td><td>{{ . }}</td></tr>{{ end }}
+      {{ with $cd.other_works }}<tr><td><strong>Other works</strong>: </td><td>{{ . }}</td></tr>{{ end }}
+      {{ with $cd.code }}<tr><td><strong>Code</strong>: </td><td>{{ . }}</td></tr>{{ end }}
+    </tbody>
+  </table>
   {{ end }}
   {{ end }}
 
@@ -37,7 +41,7 @@
   {{ end }}
 
   <p style="margin-top:2rem; font-size:0.85rem;">
-    ← <a href="/composers/">Back to all composers</a>
+    ← <a href="{{ "/composers/" | relURL }}">Back to all composers</a>
   </p>
 </article>
 {{ end }}
