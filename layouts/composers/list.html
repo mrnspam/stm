@@ -1,9 +1,9 @@
 {{ define "main" }}
-<h1>Componisten</h1>
-<p>Zoek in de collectie van {{ len .Pages }} Stabat Mater-componisten.</p>
+<h1>Composers</h1>
+<p>Search the collection of {{ len .Pages }} Stabat Mater composers.</p>
 
 <div class="filter-bar" id="filter-bar">
-  <button class="filter-btn active" data-filter="all">Alle</button>
+  <button class="filter-btn active" data-filter="all">All</button>
   {{ range seq 65 90 }}
   <button class="filter-btn" data-filter="{{ printf "%c" . }}">{{ printf "%c" . }}</button>
   {{ end }}

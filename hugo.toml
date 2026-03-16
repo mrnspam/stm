@@ -7,6 +7,9 @@ title = "The Ultimate Stabat Mater Website"
   description = "The Ultimate Stabat Mater Website — over 330 compositions, composers, texts and translations."
   noindex = true  # TEST site — not for search engines
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [taxonomies]
   country = "countries"
   period = "periods"

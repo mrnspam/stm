@@ -2,19 +2,10 @@
 <article>
   <h1>{{ .Title }}</h1>
 
-  <div class="composer-meta">
-    {{ with .Params.born }}<div><span>Born: </span><strong>{{ . }}</strong></div>{{ end }}
-    {{ with .Params.died }}<div><span>Died: </span><strong>{{ . }}</strong></div>{{ end }}
-    {{ with .Params.country }}<div><span>Country: </span><strong>{{ . }}</strong></div>{{ end }}
-    {{ with .Params.period }}<div><span>Period: </span><strong>{{ . }}</strong></div>{{ end }}
-    {{ with .Params.forces }}<div><span>Performers: </span><strong>{{ . }}</strong></div>{{ end }}
-    {{ with .Params.length }}<div><span>Length: </span><strong>{{ . }}</strong></div>{{ end }}
-  </div>
-
   {{ .Content }}
 
   {{ with .Params.cds }}
-  <h2>Recordings on CD</h2>
+  <h2>Information about the recording</h2>
   {{ range . }}
   <div class="cd-card">
     <h3>{{ .title }}</h3>
@@ -27,6 +18,20 @@
       {{ with .other_works }}<tr><th>Other works</th><td>{{ . }}</td></tr>{{ end }}
       {{ with .code }}<tr><th>Code</th><td>{{ . }}</td></tr>{{ end }}
     </table>
+  </div>
+  {{ end }}
+  {{ end }}
+
+  {{ with .Params.youtube }}
+  <h2>Listen</h2>
+  {{ range . }}
+  <div class="listen-video">
+    <iframe
+      src="{{ .url }}"
+      title="{{ .title }}"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
   </div>
   {{ end }}
   {{ end }}

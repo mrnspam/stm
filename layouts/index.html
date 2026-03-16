@@ -1,24 +1,27 @@
 {{ define "main" }}
 <div class="home-intro">
-  <h1>Explore the Timeless Legacy of the Stabat Mater</h1>
-  <p>
-    On the Ultimate Stabat Mater Website you will find the CD-collection of more than 330 different
-    Stabat Mater compositions. Search for composers: alphabetically, chronologically, by country of
-    origin and by duration. Listen to the compositions and watch the videos of special performances.
-    The site also includes translations of the original Latin poem in 33 different languages.
-  </p>
+  <h2>Explore the Timeless Legacy of the Stabat Mater</h2>
 </div>
 
 <div class="home-video">
   <iframe
-    src="https://www.youtube.com/embed/2FApgFMDNEU"
-    title="Stabat Mater Dolorosa — A Journey through Seven Centuries of Music"
+    src="https://www.youtube.com/embed/BB51Wb2UvbI?feature=oembed"
+    title="Stabat Mater Dolorosa - A Journey through Seven Centuries of Music"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen>
   </iframe>
 </div>
 
-<h2>Recente blogposts</h2>
+<h2>Search the Ultimate Stabat Mater Website</h2>
+<p>On the Ultimate Stabat Mater Website you will find the CD-collection of -now- more than 300 different Stabat Mater compositions. Search for composers: alphabetically, chronologically, by country of origin and by duration. Listen to the compositions and watch the videos of special performances. The site also includes translations of the original Latin poem Stabat Mater Dolorosa in 24 different languages. See: <a href="/blog/">Latest additions</a>.</p>
+
+<h2>Why this Stabat Mater website?</h2>
+<p>Initiator of this website, Hans van der Velden, began this journey of musical discovery in 1992 with the Stabat Mater from Haydn. He searched systematically and persistently for composers, performances on cd and translations of the original Latin poem. He brought the religious, literary, and musical world of the Stabat Mater to life. We are proud to continue his work.</p>
+
+<h2>Interested?</h2>
+<p>We hope this site is helpful for music lovers, musicians, and composers! Would you like to learn more? Subscribe to the Newsletter or read the <a href="/blog/">blog</a>. Do you have any information about performances, recordings, video's, or cds with Stabat Maters? Please, let us know!</p>
+
+<h2>Recent posts</h2>
 <div class="blog-grid">
   {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
   <div class="blog-card">
@@ -28,14 +31,4 @@
   </div>
   {{ end }}
 </div>
-
-<h2 style="margin-top:2rem;">Over deze website</h2>
-<p>
-  Initiator Hans van der Velden begon in 1992 zijn muzikale ontdekkingstocht met de Stabat Mater van Haydn.
-  Hij zocht systematisch naar componisten, uitvoeringen op cd en vertalingen van het originele Latijnse gedicht.
-  Wij zijn trots zijn werk voort te zetten.
-</p>
-<p>
-  Geïnteresseerd? Schrijf je in voor de <a href="#">nieuwsbrief</a> of lees het <a href="/blog/">blog</a>.
-</p>
 {{ end }}

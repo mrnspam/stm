@@ -7,15 +7,15 @@
   </div>
 
   <div class="sidebar-widget">
-    <h3>Zoeken</h3>
+    <h3>Search</h3>
     <form action="/search/" method="get" class="search-box">
-      <input type="text" name="q" placeholder="Zoek op de site...">
+      <input type="text" name="q" placeholder="Search this website">
       <button type="submit">→</button>
     </form>
   </div>
 
   <div class="sidebar-widget">
-    <h3>Recente blogposts</h3>
+    <h3>Recent posts</h3>
     <ul style="list-style:none; padding:0;">
       {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
       <li style="margin-bottom:0.5rem; font-size:0.85rem;">
@@ -27,11 +27,11 @@
   </div>
 
   <div class="sidebar-widget">
-    <h3>Componisten</h3>
+    <h3>Composers</h3>
     <ul style="list-style:none; padding:0; font-size:0.85rem;">
-      <li><a href="/composers/">Alfabetisch</a></li>
-      <li><a href="/composers/by-country/">Per land</a></li>
-      <li><a href="/composers/chronologically/">Chronologisch</a></li>
+      <li><a href="/composers/">Alphabetically</a></li>
+      <li><a href="/composers/by-country/">By country of origin</a></li>
+      <li><a href="/composers/chronologically/">Chronologically</a></li>
     </ul>
   </div>
 
