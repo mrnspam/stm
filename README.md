@@ -1,64 +1,88 @@
 # stabatmater-hugo
 
-Testomgeving voor de migratie van stabatmater.info van WordPress naar Hugo + GitHub Pages.
+Proof-of-concept migration of [stabatmater.info](https://stabatmater.info) from WordPress to Hugo + GitHub Pages.
 
-⚠️ **Dit is een TEST-site.** De productiewebsite staat op [stabatmater.info](https://stabatmater.info).
-De site is voorzien van `robots.txt` en `noindex` meta tags zodat zoekmachines hem niet indexeren.
+⚠️ **This is a TEST site.** The production website is at [stabatmater.info](https://stabatmater.info).
+The site includes `robots.txt` and `noindex` meta tags so search engines do not index it.
 
-## Structuur
+**Live test site:** https://mrnspam.github.io/stm/
+
+---
+
+## Content structure
 
 ```
 content/
-  composers/     ← één .md bestand per componist
-  blog/          ← één .md bestand per blogpost
-  translations/  ← vertaalpagina's
-  texts/         ← uitleg over het gedicht
+  composers/     ← one .md file per composer
+  blog/          ← one .md file per blog post
+  translations/  ← translation pages
 ```
 
-## Componist toevoegen of aanpassen
+### Adding or editing a composer
 
-Elk componistbestand heeft deze structuur:
+File: `content/composers/firstname-lastname.md`
 
 ```yaml
 ---
-title: "Naam van de componist"
+title: "Composer Name"
 born: 1710
 died: 1736
-country: "Land"
-period: "Barok"
-duration_minutes: 33
-forces: "sopraan, orkest"
+country: "Italy"
+period: "Baroque"        # Renaissance / Baroque / Classical / Romantic / Modern
+duration_minutes: 41
+forces: "soprano, alto, strings, organ"
 cds:
-  - title: "CD-titel"
-    label: "Label"
-    conductor: "Dirigent"
-    soloists: "Solisten"
+  - title: "CD title"
+    label: "Label and catalogue number"
+    conductor: "Name"
+    orchestra: "Ensemble"
+    soloists: "Name, voice type"
+    recorded: "Location, year"
+    notes: "Extra info shown on the composer page"
     code: "CODE 01"
 ---
 
-Tekst over de componist...
+## About the composer
+
+Free text (English)...
+
+## About the Stabat Mater
+
+**Date:** ...  **Performers:** ...  **Length:** ...
 ```
 
-## Blogpost toevoegen
+### Adding a blog post
 
-Maak een nieuw bestand in `content/blog/` met naam `YYYY-MM-DD-titel.md`:
+File: `content/blog/YYYY-MM-DD-short-title.md`
 
 ```yaml
 ---
-title: "Titel van de post"
+title: "Full post title"
 date: 2025-06-01
-summary: "Korte samenvatting voor de bloglijst."
+summary: "One sentence for the blog list and homepage."
 ---
 
-Inhoud van de blogpost...
+Post body in English...
 ```
 
-## Lokaal draaien
+---
+
+## Images
+
+Images are not stored in git. They are downloaded from stabatmater.info during the GitHub Actions build (`curl` step in `deploy.yml`) and baked into the deployment. Use `{{ "images/filename" | absURL }}` in templates.
+
+---
+
+## Local development
 
 ```bash
 hugo server
 ```
 
-## Automatisch deployen
+---
 
-Bij elke `git push` naar `main` bouwt GitHub Actions de site automatisch en publiceert hem op GitHub Pages.
+## Deployment
+
+Every `git push` to `main` triggers GitHub Actions: downloads images, builds with `hugo --minify`, deploys to GitHub Pages. Build time ~28s.
+
+GitHub Pages source must be set to **"GitHub Actions"** in Settings → Pages.
