@@ -2,32 +2,27 @@
 title: "Gregor Aichinger"
 born: 1564
 died: 1628
-country: "Duitsland"
-country_code: "DE"
+country: "Germany"
 period: "Renaissance"
-duration_minutes: 8
-forces: "5 vocale stemmen"
+duration_minutes: 4
+forces: "five voices, a cappella"
 cds:
-  - title: "Music from the Fugger Collections"
-    label: "CPO 999 454-2"
-    conductor: "Hans-Christoph Rademann"
-    orchestra: "Dresdner Kammerchor"
-    soloists: ""
-    recorded: "Dresden, 1997"
-    notes: "Aichingers Stabat Mater maakt deel uit van een collectie muziek die door de adellijke familie Fugger werd bijeengebracht."
-    code: "AIC 01"
+  - title: "Schwesterhochfuenf – Geistliche Vokalmusik a Cappella"
+    label: "Cavalli Records CCD 331"
+    conductor: ""
+    orchestra: ""
+    soloists: "Agnes Tschuschke, Cordula Tschuschke, Monika Tschuschke, Franziska Tschuschke, Maria Tschuschke"
+    recorded: "2010"
+    notes: "Schwesterhochfuenf really is a vocal ensemble made up of five sisters! For years it has been a matter of course to sing together at family get-togethers. The idea of going public with their skills came up only in 2004. Fré Thissen pointed me to this Stabat Mater, unknown to me. Other works: Orlando di Lasso, Palestrina, Victoria, Duruflé and others."
+    code: "2010 MACD 01"
 ---
 
-## Over de componist
+## About the composer
 
-Gregor Aichinger werd geboren in 1564 in Regensburg. Hij werkte als organist en muziekdirecteur bij de machtige koopmansfamilie Fugger in Augsburg, en studeerde later in Rome bij Giovanni Pierluigi da Palestrina. Deze Italiaanse invloed is duidelijk hoorbaar in zijn composities.
+Gregor Aichinger, a German composer of religious music, was born in 1564 in Regensburg. He became an organist to the family of Jacob Fugger in Augsburg from 1584. He visited Italy in 1584–87 and again in 1598–1600. His music is chiefly choral and ecclesiastical, set to Latin texts. He died in Augsburg, Germany, in 1628.
 
-Na zijn terugkeer uit Italië werd Aichinger priester en bleef hij zijn leven lang verbonden aan de kathedraal van Augsburg. Hij overleed in 1628.
+## About the Stabat Mater
 
-## Over de Stabat Mater
+**Date:** 1597 &nbsp; **Performers:** Five voices, a cappella &nbsp; **Length:** 3.32 minutes
 
-Aichingers Stabat Mater is een vroeg voorbeeld van het genre: polyfoon, rustig en meditactief van karakter, sterk beïnvloed door de Palestrina-stijl. Het werk voor vijf stemmen heeft een ingetogen schoonheid die typerend is voor de late Renaissance.
-
-**Datum:** ca. 1603
-**Bezetting:** 5 vocale stemmen (SSATB)
-**Duur:** ca. 8 minuten
+Five singing sisters, I love it. Only stanzas 1, 2, 3, 9 and 20 are sung.

@@ -2,47 +2,48 @@
 title: "Girolamo Abos"
 born: 1715
 died: 1760
-country: "Malta / Italië"
-country_code: "IT"
-period: "Barok"
+country: "Malta / Italy"
+period: "Baroque"
 duration_minutes: 30
-forces: "2 sopranen, alt, orkest"
+forces: "2 sopranos, alto, orchestra"
 cds:
-  - title: "The High Baroque – Composers from Malta (2 cd's)"
+  - title: "The High Baroque – Composers from Malta (2 CD's)"
     conductor: "Joseph Vella"
     orchestra: "Baroque Ensemble"
-    soloists: "Miriam Cauchi, Claire Debono (sopranen), Claire Massa (alt)"
-    recorded: "St. George's Basilica, Victoria Gozo, Malta, februari–juni 2002"
-    notes: "Geen commercieel label. Deel van een serie van de Fondazzjoni Memorja Kulturali Nazzjonali."
+    soloists: "Miriam Cauchi and Claire Debono, sopranos; Claire Massa, alto"
+    recorded: "St. George's Basilica, Victoria Gozo, Malta, February – June 2002"
+    notes: "Not a commercial release. Part of a series made for the Fondazzjoni Mermorja Kulturali Nazzjonali to conserve Maltese culture. Other works: Pietro Gristi: Beatus vir + Missa di Gloria + Nisi Dominus; Mikielang Vella: Salve sancta parens."
     code: "ABO 01"
   - title: "Cypres Records CYP1639: Stabat Mater – Abos – Tartini – Gasparini"
     label: "Cypres Records"
     conductor: "Daniel Cuiller"
     orchestra: "Stradivaria"
-    soloists: "Isabelle Poulenard, Isabelle Desrochers (sopranen), Martin Oro (contratenor)"
-    recorded: "Abbaye Royale de Fontevraud, december 2002"
-    notes: "Drie Stabat Mater-composities uit circa 1760. Andere werken: Tartini en Gasparini."
+    soloists: "Isabelle Poulenard and Isabelle Desrochers, sopranos; Martin Oro, countertenor"
+    recorded: "Abbaye Royale de Fontevraud, December 2002"
+    notes: "Three Stabat Mater compositions from around 1760. Other works: Giuseppe Tartini: Stabat Mater; Quirino Gasparini: Stabat Mater."
     code: "2003 GASP 01"
 ---
 
-## Over de componist
+## About the composer
 
-Girolamo Abos werd geboren op het eiland Malta, Italië, in 1715. Nog zeer jong werd hij naar Napels gestuurd om te studeren en keerde nooit meer terug naar zijn geboorteland. Hij begon zijn carrière in 1742 met het componeren van opera buffa voor het Teatro Nuovo. Vanaf 1754 was hij leraar aan de S. Maria della Pietà dei Turchini, waar hij Paisiello als leerling had.
+Girolamo Abos was born on the island of Malta, Italy, in 1715. Still very young, he was sent to Naples to study and he never returned to his birthplace. He started his career in 1742 by composing opera buffo for the Teatro Nuovo. From 1754 he was a teacher at the S. Maria della Pietà dei Turchini, where he had Paisiello under his students.
 
-Abos kan voor alle doeleinden als een Italiaanse componist worden beschouwd. Hij was bekend in Europa, waar hij veel reisde. In Londen was hij enige jaren muziekdirecteur van het Italian Theatre. Abos componeerde vele opera's en geestelijke werken. Hij overleed in 1760.
+For all purposes, Abos can be regarded as an Italian composer. He was well known in Europe, where he traveled quite a lot. In London he was musical director of the Italian Theatre for some years. Abos composed many operas and sacred works. He died in 1760.
 
-## Over de Stabat Mater
+## About the Stabat Mater
 
-De compositie dateert uit 1750. Het werk is verdeeld in zes secties, waarbij het slotamen — een fuga — als aparte sectie fungeert. De eerste strofe doet me sterk denken aan Pergolesi, ook al is het duidelijk anders. Het is fraaie muziek, duidelijk beïnvloed door zijn operawerk.
+**Date:** 1750 &nbsp; **Performers:** 2 Sopranos, Alto and Orchestra &nbsp; **Length:** CD 1: 30.41 min., CD 2: 23.17 min.
 
-**Datum:** 1750
-**Bezetting:** 2 sopranen, alt en orkest
-**Duur:** CD 1: 30.41 min., CD 2: 23.17 min.
+The work is divided into six sections, with the final Amen — a fugue — as a separate section. The first stanza reminds me strongly of Pergolesi, even if it is quite different. It is fine music, clearly influenced by his work on operas. What surprises me is the difference in tempo between the two performances.
 
-### Tekstuele varianten
+### Textual variations
 
-De "Analecta"-versie wordt gebruikt, maar met variaties — met name in CD 1:
+The "Analecta"-version is used, but with some variations, especially in CD 1:
 
-- Strofe 4, r. 2: niet "Et tremebat cum videbat" maar "Pia Mater dum videbat"
-- Strofe 5, r. 2: niet "Christi Matrem" maar "Matrem Christi"
-- Strofe 16, r. 2: niet "Passionis eius sortem" maar "Passionis fac consortem"
+- Stanza 4, line 2: Not "Et tremebat cum videbat" but "Pia Mater dum videbat"
+- Stanza 5, line 2: Not "Christi Matrem" but "Matrem Christi"
+- Stanza 16, line 2: Not "Passionis eius sortem" but "Passionis fac consortem"
+- Stanza 17, line 3: Not "Ob amorem Filii" but "Et cruore Filii"
+- Stanza 18, line 1: Not "Inflammatus et accensus" but "Flammis ne urrar succensus"
+
+In CD 2 the Analecta version is followed much more closely, deviating only in stanzas 4 and 16.

@@ -27,6 +27,17 @@ jobs:
           hugo-version: "0.128.0"
           extended: true
 
+      - name: Download images from stabatmater.info
+        run: |
+          mkdir -p static/images
+          curl -sL -o static/images/logo.png \
+            "https://stabatmater.info/wp-content/uploads/2021/02/cropped-cropped-stabat-mater-beeld.png"
+          curl -sL -o static/images/hero-banner.jpg \
+            "https://stabatmater.info/wp-content/uploads/2021/01/banner-8.jpg"
+          curl -sL -o static/images/donate-banner.jpg \
+            "https://stabatmater.info/wp-content/uploads/2025/02/banner-met-tekst-nw-300x175.jpg"
+          echo "Downloaded: $(du -sh static/images/*)"
+
       - name: Build
         run: hugo --minify
 
