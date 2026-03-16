@@ -1,0 +1,36 @@
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+
+  <div class="composer-meta">
+    {{ with .Params.born }}<div><span>Geboren: </span><strong>{{ . }}</strong></div>{{ end }}
+    {{ with .Params.died }}<div><span>Gestorven: </span><strong>{{ . }}</strong></div>{{ end }}
+    {{ with .Params.country }}<div><span>Land: </span><strong>{{ . }}</strong></div>{{ end }}
+    {{ with .Params.period }}<div><span>Periode: </span><strong>{{ . }}</strong></div>{{ end }}
+    {{ with .Params.duration_minutes }}<div><span>Duur: </span><strong>{{ . }} minuten</strong></div>{{ end }}
+    {{ with .Params.forces }}<div><span>Bezetting: </span><strong>{{ . }}</strong></div>{{ end }}
+  </div>
+
+  {{ .Content }}
+
+  {{ with .Params.cds }}
+  <h2>Opnames op CD</h2>
+  {{ range . }}
+  <div class="cd-card">
+    <h3>{{ .title }}</h3>
+    {{ with .label }}<p><strong>Label:</strong> {{ . }}</p>{{ end }}
+    {{ with .conductor }}<p><strong>Dirigent:</strong> {{ . }}</p>{{ end }}
+    {{ with .orchestra }}<p><strong>Orkest:</strong> {{ . }}</p>{{ end }}
+    {{ with .soloists }}<p><strong>Solisten:</strong> {{ . }}</p>{{ end }}
+    {{ with .recorded }}<p><strong>Opgenomen:</strong> {{ . }}</p>{{ end }}
+    {{ with .notes }}<p>{{ . }}</p>{{ end }}
+    {{ with .code }}<p class="cd-code">Code: {{ . }}</p>{{ end }}
+  </div>
+  {{ end }}
+  {{ end }}
+
+  <p style="margin-top:2rem; font-size:0.85rem;">
+    ← <a href="/composers/">Terug naar alle componisten</a>
+  </p>
+</article>
+{{ end }}

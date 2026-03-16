@@ -1,0 +1,40 @@
+{{ define "main" }}
+<h1>Componisten</h1>
+<p>Zoek in de collectie van {{ len .Pages }} Stabat Mater-componisten.</p>
+
+<div class="filter-bar" id="filter-bar">
+  <button class="filter-btn active" data-filter="all">Alle</button>
+  {{ range seq 65 90 }}
+  <button class="filter-btn" data-filter="{{ printf "%c" . }}">{{ printf "%c" . }}</button>
+  {{ end }}
+</div>
+
+<div class="composer-grid" id="composer-list">
+  {{ range .Pages }}
+  <div class="composer-item" data-letter="{{ upper (substr .Title 0 1) }}">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </div>
+  {{ end }}
+</div>
+
+<script>
+(function() {
+  var btns = document.querySelectorAll('.filter-btn');
+  var items = document.querySelectorAll('.composer-item');
+  btns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var f = btn.dataset.filter;
+      items.forEach(function(item) {
+        if (f === 'all' || item.dataset.letter === f) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    });
+  });
+})();
+</script>
+{{ end }}

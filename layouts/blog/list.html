@@ -1,0 +1,12 @@
+{{ define "main" }}
+<h1>Blog</h1>
+<div class="blog-grid">
+  {{ range .Pages }}
+  <div class="blog-card">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <div class="date">{{ .Date.Format "2 January 2006" }}</div>
+    <p>{{ .Summary }}</p>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

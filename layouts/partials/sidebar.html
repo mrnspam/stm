@@ -1,0 +1,37 @@
+<aside class="sidebar">
+
+  <div class="sidebar-donate">
+    <p>Help ons de website advertentievrij te houden</p>
+    <a href="https://stabatmater.info/stabat-mater-collection-support/" class="btn" target="_blank">Doneer</a>
+  </div>
+
+  <div class="sidebar-widget">
+    <h3>Zoeken</h3>
+    <form action="/search/" method="get" class="search-box">
+      <input type="text" name="q" placeholder="Zoek op de site...">
+      <button type="submit">→</button>
+    </form>
+  </div>
+
+  <div class="sidebar-widget">
+    <h3>Recente blogposts</h3>
+    <ul style="list-style:none; padding:0;">
+      {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
+      <li style="margin-bottom:0.5rem; font-size:0.85rem;">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <div style="font-size:0.75rem; color:#999;">{{ .Date.Format "02-01-2006" }}</div>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <div class="sidebar-widget">
+    <h3>Componisten</h3>
+    <ul style="list-style:none; padding:0; font-size:0.85rem;">
+      <li><a href="/composers/">Alfabetisch</a></li>
+      <li><a href="/composers/by-country/">Per land</a></li>
+      <li><a href="/composers/chronologically/">Chronologisch</a></li>
+    </ul>
+  </div>
+
+</aside>

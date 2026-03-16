@@ -1,0 +1,26 @@
+<div class="test-banner">⚠ TEST SITE — Deze site is niet de productiewebsite. Bezoek <a href="https://stabatmater.info" style="color:white;text-decoration:underline">stabatmater.info</a> voor de echte site.</div>
+
+<div class="topbar">
+  <a href="https://stabatmater.info/stabat-mater-collection-support/" target="_blank">Donate</a>
+  <a href="https://www.instagram.com/stabatmater.info/" target="_blank">Instagram</a>
+  <a href="https://www.youtube.com/channel/UCPUZ1hgQgIIYQeMqoJWWoXw" target="_blank">YouTube</a>
+</div>
+
+<header class="site-header">
+  <a href="/" style="text-decoration:none; color:inherit;">
+    <h1 class="site-title">The Ultimate Stabat Mater Website</h1>
+    <p class="site-subtitle">a musical journey through the ages</p>
+  </a>
+</header>
+
+<div class="hero-banner"></div>
+
+<nav class="main-nav">
+  <ul>
+    {{ range .Site.Menus.main }}
+    <li>
+      <a href="{{ .URL }}"{{ if eq $.RelPermalink .URL }} class="active"{{ end }}>{{ .Name }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</nav>
