@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "About the foundation"
 banner: "banner5.jpg"
 ---
 

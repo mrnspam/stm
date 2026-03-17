@@ -16,4 +16,3 @@ The intimate atmosphere of the Oude Kerk enhanced the experience, with the audie
 
 This unique arrangement demonstrated that Pergolesi's Stabat Mater remains not just a historical piece but a universal expression of grief that transcends time and conventional instrumentation. The performance confirmed that sometimes the most profound musical experiences come through reimagining rather than merely reproducing the past.
 
-Want to know more about Pergolesi? Visit his [composer page](/composers/giovanni-battista-pergolesi/).

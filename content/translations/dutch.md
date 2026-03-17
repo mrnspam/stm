@@ -1,6 +1,5 @@
 ---
-title: "Dutch translations"
-description: "The Stabat Mater poem translated into Dutch — multiple versions."
+title: "Stabat Mater: Dutch translations"
 ---
 
 I listened carefully to all Stabat Maters I collected to find out what text was being sung, which was not always easy to do. At first, all texts were compared to the one I give below, which seems to be published in Analecta hymnica mediiaevi, vol. 54, p.312. Variations on this text are in italics. These variations almost all appear to come from the version which is being used in the Catholic Church. So now I check the texts against the "Analecta"-version and the "Vatican"-version. The translation into Dutch I did myself, not from the Latin text, but from "literal" English and German translations. Later I was helped by Mrs. Anita van Ommeren, a teacher in Latin, to find out what the literal Latin text really says. On this page you will find several Dutch rhyming translations. The ones by the contemporary poet Wilmink and the 17th century poet Joost van den Vondel I found on the site of the Christian Oratorio Choir Excelsior.
@@ -188,6 +187,26 @@ Maagd en Moeder, grift de wonden die uw Zoon, aan 't kruis gebonden ondervond, d
 Maagd, der Maagden uitverkoren, wilt mijn bede toch verhoren: dat ik met U tranen pleng'. Laat mij Christus' doodsstrijd strijden en 't lot van zijn leed belijden, dat ik Hem zo hulde breng'.
 Wilt mij in Zijn wonden hullen, mij gans van het kruis vervullen mij bedwelmen door Zijn bloed. Laat het vuur mij niet verteren, wees mijn voorspraak, Maagd, wanneer men mij voor 't Oordeel komen doet.
 Christus, als ook ik het leven laat, doet uw Moeder mij geven te dier stond de zegeprijs. Als mijn lichaam komt te sterven, laat mijn ziel dan toch verwerven glorie in het Paradijs. Amen.
+
+---
+
+## Rhymed translation by Marc Krone (2021)
+
+| 1 | 2 | 3 | — Op een hoge heuvel, huilend, / staat een diepbedroefde moeder / bij haar net gestorven kind. / Wreedheid heeft haar hart gebroken / 't is alsof het werd doorstoken / door het zwaard der marteling. / Nu de dood hen heeft gescheiden / strijdt verdriet met medelijden / in haar door smart verscheurde hart.
+
+| 4 | 5 | 6 | — De moeder gilt, verscheurt haar kleren, beeft: / het kind, uit haar geboren leeft … niet meer / en hangt gefolterd in de wind. / Wie blijft koel en onbewogen; / wie is zonder mededogen: / bij zo'n wrede marteling? / Geen hart zo hard, barbaars of koud / dat niet een vonk van deernis voelt / als door een moeder wordt gerouwd.
+
+| 7 | 8 | — Niet voor zichzelf maar voor de zonden / van de wereld stierf haar zoon. / Maar een moeder blijft een moeder / dus verzacht dat niet haar pijn. / Kan haar kind, zo peilloos eenzaam, / hier van God verlaten zijn?
+
+| 9 | 10 | 11 | 12 | 13 | 14 | — Deel, Moeder, bron van liefde, / uw oneindige ellende. / Ik wil samen met u treuren / dan zal ook mijn hart ontbranden / voor uw diep beweende kind. / Als oprechte offerande / zal ik samen met u treuren / en te samen met u delen / opdat de mensheid vrede vindt. / Ik deel met u, in uw pijn / in 't wanhopige verdriet / om wie voor ons, het leven liet. / Voor altijd zal ik hem beklagen / en te samen met u rouwen / Uit respect mijn lieve vrouwe / zal ik bittere pijn verdragen. / Het is mij zoet en aangenaam / met u aan het kruis te staan.
+
+| 15 | 16 | — Maagd der maagden, uitverkoren, / wees niet verbitterd om uw lot. / Help mij uw verdriet te dragen / laat mij delen in zijn dood. / Laat mij samen met u huilen / gedeeld verdriet is minder groot
+
+| 17 | 18 | 19 | — Laat zijn wonden zijn mijn wonden. / Laat uw zoon ook mijn zoon zijn. / Leer mij hoe uw ziel zo zuiver / om kan gaan met zoveel pijn. / Laat die pijn mij niet verzengen. / Leer mij hoe U haar verdraagt. / Laat het kruis ook mij beschermen / dat het al mijn angst verjaagt.
+
+| 20 | — En als mijn tijd dan is gekomen, / ik klaar ben voor mijn laatste reis, / wilt U mij dan vergezellen / naar het hemels paradijs?
+
+The translation may only be used with written permission of the translator Marc Krone.
 
 ---
 
