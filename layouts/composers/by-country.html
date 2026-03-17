@@ -6,12 +6,12 @@
 {{ range $composers }}
   {{ $country := .Params.country | default "Unknown" }}
   {{ $existing := index $byCountry $country | default slice }}
-  {{ $byCountry = merge $byCountry (dict $country (append $existing .)) }}
+  {{ $byCountry = merge $byCountry (dict $country (append . $existing)) }}
 {{ end }}
 
 {{ $countries := slice }}
 {{ range $country, $_ := $byCountry }}
-  {{ $countries = append $countries $country }}
+  {{ $countries = append $country $countries }}
 {{ end }}
 {{ $countries = sort $countries }}
 

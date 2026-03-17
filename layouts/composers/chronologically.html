@@ -31,7 +31,7 @@
 {{ range $composers }}
   {{ $p := .Params.period | default "" }}
   {{ if not (in $stdPeriods $p) }}
-    {{ $other = append $other . }}
+    {{ $other = append . $other }}
   {{ end }}
 {{ end }}
 {{ if $other }}
