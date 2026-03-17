@@ -139,15 +139,15 @@ def parse_cds(cd_section):
     The section looks like:
       CD1: title More info: notes Orchestra: ... Code: X  CD2: title ...
     """
-    # Split on CDN: marker (lookahead keeps the marker in each block)
-    blocks = re.split(r'(?=\bCD\d+:\s)', cd_section.strip())
+    # Split on CDN: or CD: marker (lookahead keeps the marker in each block)
+    blocks = re.split(r'(?=\bCD\d*:\s)', cd_section.strip())
     cds = []
     for block in blocks:
         block = block.strip()
-        if not re.match(r'CD\d+:\s', block):
+        if not re.match(r'CD\d*:\s', block):
             continue
-        # Strip "CDN: " prefix
-        m = re.match(r'CD\d+:\s*(.*)', block, re.DOTALL)
+        # Strip "CDN: " or "CD: " prefix
+        m = re.match(r'CD\d*:\s*(.*)', block, re.DOTALL)
         if not m:
             continue
         rest = m.group(1).strip()
@@ -226,7 +226,7 @@ def yval(val, threshold=100, indent=6):
 
 # ── Generation ────────────────────────────────────────────────────────────────
 
-def build_front_matter(slug, title, bio_text, meta, cds, youtube, colorbars, country_override):
+def build_front_matter(slug, title, bio_text, meta, cds, youtube, colorbars, country_override, period_override=''):
     born, died = extract_years(bio_text)
     country = country_override  # passed from CLI (or empty)
 
@@ -238,6 +238,8 @@ def build_front_matter(slug, title, bio_text, meta, cds, youtube, colorbars, cou
         lines.append('died: ' + str(died))
     if country:
         lines.append('country: ' + yq(country))
+    if period_override:
+        lines.append('period: ' + yq(period_override))
     lines.append('banner: "banneri.jpg"')
 
     if youtube:
@@ -290,7 +292,7 @@ def build_body(bio_text, meta, colorbars):
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
-def convert(slug, raw_text, youtube_args, colorbar_args, country_override):
+def convert(slug, raw_text, youtube_args, colorbar_args, country_override, period_override=''):
     text = strip_header(raw_text)
     # Collapse multiple spaces/newlines to single space for flat-text parsing
     flat = re.sub(r'\s+', ' ', text).strip()
@@ -320,19 +322,17 @@ def convert(slug, raw_text, youtube_args, colorbar_args, country_override):
         parts = raw.split('|', 1)
         vid = parts[0].strip()
         yt_title = parts[1].strip() if len(parts) > 1 else ''
-        if vid == 'videoseries':
-            # Should not happen if user provides correct ID; skip
-            continue
-        # Reconstruct full embed URL
-        youtube.append({
-            'url': 'https://www.youtube.com/embed/' + vid + '?feature=oembed',
-            'title': yt_title,
-        })
+        # If vid already contains query params (e.g. videoseries?list=XXX), use as-is
+        if '?' in vid:
+            url = 'https://www.youtube.com/embed/' + vid
+        else:
+            url = 'https://www.youtube.com/embed/' + vid + '?feature=oembed'
+        youtube.append({'url': url, 'title': yt_title})
 
     colorbars = [c.strip() for c in colorbar_args if c.strip()]
 
     front_matter = build_front_matter(
-        slug, title, bio_text, meta, cds, youtube, colorbars, country_override
+        slug, title, bio_text, meta, cds, youtube, colorbars, country_override, period_override
     )
     body = build_body(bio_text, meta, colorbars)
     return front_matter + '\n\n' + body
@@ -350,12 +350,14 @@ def main():
                         help='Colorbar image filename (repeat for multiple)')
     parser.add_argument('--country', metavar='"Country Name"', default='',
                         help='Country name (if auto-detection is insufficient)')
+    parser.add_argument('--period', metavar='"Baroque"', default='',
+                        help='Period (Medieval/Renaissance/Baroque/Classical/Romantic/Modern/Contemporary)')
     args = parser.parse_args()
 
     with open(args.page_text_file, 'r', encoding='utf-8') as f:
         raw_text = f.read()
 
-    result = convert(args.slug, raw_text, args.youtube, args.colorbar, args.country)
+    result = convert(args.slug, raw_text, args.youtube, args.colorbar, args.country, args.period)
 
     os.makedirs(CONTENT_DIR, exist_ok=True)
     output_file = os.path.join(CONTENT_DIR, args.slug + '.md')

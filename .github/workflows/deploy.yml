@@ -63,6 +63,30 @@ jobs:
             "https://stabatmater.info/wp-content/uploads/colorbar/pergolesi2.gif"
           curl -sL -o static/images/vivaldi.gif \
             "https://stabatmater.info/wp-content/uploads/colorbar/vivaldi.gif"
+          curl -sL -o static/images/haydn.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/haydn.gif"
+          curl -sL -o static/images/rossini.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/rossini.gif"
+          curl -sL -o static/images/gregorian.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/gregorian.gif"
+          curl -sL -o static/images/schubert1.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/schubert1.gif"
+          curl -sL -o static/images/schubert2.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/schubert2.gif"
+          curl -sL -o static/images/dvorak.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/dvorak.gif"
+          curl -sL -o static/images/palestrina.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/palestrina.gif"
+          curl -sL -o static/images/poulenc.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/poulenc.gif"
+          curl -sL -o static/images/boccherini1.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/boccherini1.gif"
+          curl -sL -o static/images/boccherini2.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/boccherini2.gif"
+          curl -sL -o static/images/scarlata.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/scarlata.gif"
+          curl -sL -o static/images/penderecki.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/penderecki.gif"
           echo "Downloaded images:"
           ls -lh static/images/
 
