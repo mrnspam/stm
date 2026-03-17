@@ -1,0 +1,37 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+
+<div class="filter-bar" id="filter-bar">
+  <button class="filter-btn active" data-letter="all">All</button>
+  {{ range seq 65 90 }}
+  <button class="filter-btn" data-letter="{{ printf "%c" . }}">{{ printf "%c" . }}</button>
+  {{ end }}
+</div>
+
+<div class="composer-grid" id="composer-list">
+  {{ range sort .Site.RegularPages "Title" "asc" }}
+  {{ if eq .Section "composers" }}
+  <div class="composer-item" data-name="{{ .Title }}">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </div>
+  {{ end }}
+  {{ end }}
+</div>
+
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const letter = this.dataset.letter;
+    document.querySelectorAll('.composer-item').forEach(item => {
+      if (letter === 'all' || item.dataset.name.startsWith(letter)) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+  });
+});
+</script>
+{{ end }}

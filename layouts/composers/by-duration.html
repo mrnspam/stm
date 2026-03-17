@@ -1,0 +1,15 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+
+<p>Each composer page includes a colour bar — a graphical representation of the Stabat Mater performance. The bar shows the musical flow of the piece over time: the length of the bar reflects the total duration, and colours represent successive sections of the work.</p>
+
+<p>Sorting by duration requires CD timing data for all composers. Below is the list in alphabetical order; the colour bars on individual composer pages show the duration visually.</p>
+
+{{ $composers := where .Site.RegularPages "Section" "composers" }}
+<ul>
+  {{ range sort $composers "Title" "asc" }}
+  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end }}
+</ul>
+
+{{ end }}

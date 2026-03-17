@@ -71,11 +71,16 @@ title = "The Ultimate Stabat Mater Website"
     weight = 6
 
   [[menu.main]]
+    name = "Donate?"
+    url = "https://stabatmater.info/stabat-mater-collection-support/"
+    weight = 7
+
+  [[menu.main]]
     name = "About"
     url = "/stm/about/"
-    weight = 7
+    weight = 8
 
   [[menu.main]]
     name = "Contact"
     url = "/stm/contact/"
-    weight = 8
+    weight = 9
