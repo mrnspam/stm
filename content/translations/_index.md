@@ -8,7 +8,7 @@ Originally the Stabat Mater is meant for private reading or praying. It belongs 
 
 Thanks to many interested and engaged visitors from all over the world, we now have 33 translations of the original Latin Stabat Mater text, from Afrikaans to Welsh.
 
-- [The original Latin text]({{ "translations/latin/" | relURL }})
+- [The original Latin text](latin/)
 - Afrikaans
 - Basque
 - Breton
@@ -16,7 +16,7 @@ Thanks to many interested and engaged visitors from all over the world, we now h
 - Croatian
 - Czech
 - Danish
-- [Dutch]({{ "translations/dutch/" | relURL }})
+- [Dutch](dutch/)
 - English
 - Finnish
 - French
