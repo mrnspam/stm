@@ -1,6 +1,7 @@
 {{ define "main" }}
+{{ $composers := where .Pages "Params.is_index" "!=" true }}
 <h1>Composers</h1>
-<p>Search the collection of {{ len .Pages }} Stabat Mater composers.</p>
+<p>Search the collection of {{ len $composers }} Stabat Mater composers.</p>
 
 <div class="filter-bar" id="filter-bar">
   <button class="filter-btn active" data-filter="all">All</button>
@@ -10,7 +11,7 @@
 </div>
 
 <div class="composer-grid" id="composer-list">
-  {{ range .Pages }}
+  {{ range $composers }}
   <div class="composer-item" data-letter="{{ upper (substr .Title 0 1) }}">
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
   </div>

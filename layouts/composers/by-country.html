@@ -1,7 +1,7 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
 
-{{ $composers := where .Site.RegularPages "Section" "composers" }}
+{{ $composers := where (where .Site.RegularPages "Section" "composers") "Params.is_index" "!=" true }}
 {{ $byCountry := dict }}
 {{ range $composers }}
   {{ $country := .Params.country | default "Unknown" }}

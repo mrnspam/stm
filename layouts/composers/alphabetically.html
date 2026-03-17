@@ -9,12 +9,10 @@
 </div>
 
 <div class="composer-grid" id="composer-list">
-  {{ range sort .Site.RegularPages "Title" "asc" }}
-  {{ if eq .Section "composers" }}
+  {{ range sort (where (where .Site.RegularPages "Section" "composers") "Params.is_index" "!=" true) "Title" "asc" }}
   <div class="composer-item" data-name="{{ .Title }}">
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
   </div>
-  {{ end }}
   {{ end }}
 </div>
 

@@ -5,7 +5,7 @@
 
 <p>Sorting by duration requires CD timing data for all composers. Below is the list in alphabetical order; the colour bars on individual composer pages show the duration visually.</p>
 
-{{ $composers := where .Site.RegularPages "Section" "composers" }}
+{{ $composers := where (where .Site.RegularPages "Section" "composers") "Params.is_index" "!=" true }}
 <ul>
   {{ range sort $composers "Title" "asc" }}
   <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
