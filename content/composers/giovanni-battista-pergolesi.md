@@ -5,6 +5,7 @@ died: 1736
 country: "Italy"
 period: "Baroque"
 forces: "soprano, alto, three violins, cello, organ"
+banner: "banneri.jpg"
 youtube:
   - url: "https://www.youtube.com/embed/videoseries?list=PLusFCki9uuLml6ZJgmDIwS3bA2895pyem"
     title: "Stabat Mater - Pergolesi"

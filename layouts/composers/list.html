@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $composers := where .Pages "Params.is_index" "!=" true }}
 <h1>Composers</h1>
-<p>Search the collection of {{ len $composers }} Stabat Mater composers.</p>
+<p>Search for Stabat Mater composers in the collection of – now – {{ len $composers }} compositions. You'll find information about the composer, the Stabat Mater, the CD-recordings, and performers (conductor, orchestra, soloists, choir). The colour bar is a graphic representation of the composition.</p>
 
 <div class="filter-bar" id="filter-bar">
   <button class="filter-btn active" data-filter="all">All</button>

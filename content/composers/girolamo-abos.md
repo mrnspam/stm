@@ -4,6 +4,7 @@ born: 1715
 died: 1760
 country: "Malta / Italy"
 period: "Baroque"
+banner: "banneri.jpg"
 youtube:
   - url: "https://www.youtube.com/embed/sbgIqGmMc1A?feature=oembed"
     title: "Stabat Mater - Girolamo Abos"

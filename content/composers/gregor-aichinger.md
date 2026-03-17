@@ -4,6 +4,7 @@ born: 1564
 died: 1628
 country: "Germany"
 period: "Renaissance"
+banner: "banneri.jpg"
 youtube:
   - url: "https://www.youtube.com/embed/mvXJA_TQJ2Q?feature=oembed"
     title: "Stabat Mater - Gregor Aichinger"

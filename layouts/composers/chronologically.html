@@ -1,6 +1,8 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
 
+<p>In this list I have arranged the Stabat Mater compositions in my collection in chronological order. Anonymus compositions have been left out. For a number of composers the year that the Stabat Mater has been composed is not known. In these cases I have chosen a year that seems appropiate.</p>
+
 {{ $composers := where (where .Site.RegularPages "Section" "composers") "Params.is_index" "!=" true }}
 
 {{ $periods := slice "Medieval" "Renaissance" "Baroque" "Classical" "Romantic" "Modern" "Contemporary" }}

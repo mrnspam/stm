@@ -1,14 +1,14 @@
 <aside class="sidebar">
 
   <div class="sidebar-donate">
-    <a href="https://stabatmater.info/stabat-mater-collection-support/" target="_blank">
+    <a href="{{ "/donate/" | relURL }}">
       <img src="{{ "images/donate-banner.jpg" | absURL }}" alt="Support our mission, please donate" style="width:100%; border-radius:4px; display:block;">
     </a>
   </div>
 
   <div class="sidebar-widget">
     <h3>Search</h3>
-    <form action="/search/" method="get" class="search-box">
+    <form action="{{ "/search/" | relURL }}" method="get" class="search-box">
       <input type="text" name="q" placeholder="Search this website">
       <button type="submit">→</button>
     </form>
@@ -29,9 +29,9 @@
   <div class="sidebar-widget">
     <h3>Composers</h3>
     <ul style="list-style:none; padding:0; font-size:0.85rem;">
-      <li><a href="/composers/">Alphabetically</a></li>
-      <li><a href="/composers/by-country/">By country of origin</a></li>
-      <li><a href="/composers/chronologically/">Chronologically</a></li>
+      <li><a href="{{ "/composers/" | relURL }}">Alphabetically</a></li>
+      <li><a href="{{ "/composers/by-country/" | relURL }}">By country of origin</a></li>
+      <li><a href="{{ "/composers/chronologically/" | relURL }}">Chronologically</a></li>
     </ul>
   </div>
 

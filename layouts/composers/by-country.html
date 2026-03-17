@@ -1,6 +1,8 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
 
+<p>In this list we have arranged the Stabat Mater compositions in our collection by order of country of origin. Anonymous compositions have been left out. For a number of composers that have moved to other countries during their life, we've chosen the country where they were born. Not surprisingly, Italy is the winner!</p>
+
 {{ $composers := where (where .Site.RegularPages "Section" "composers") "Params.is_index" "!=" true }}
 {{ $byCountry := dict }}
 {{ range $composers }}

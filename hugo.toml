@@ -77,7 +77,7 @@ title = "The Ultimate Stabat Mater Website"
 
   [[menu.main]]
     name = "Donate?"
-    url = "https://stabatmater.info/stabat-mater-collection-support/"
+    url = "/donate/"
     weight = 8
 
   [[menu.main]]
