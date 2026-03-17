@@ -17,57 +17,57 @@ title = "The Ultimate Stabat Mater Website"
 [menu]
   [[menu.main]]
     name = "Home"
-    url = "/stm/"
+    url = "/"
     weight = 1
 
   [[menu.main]]
     name = "Composers"
     identifier = "composers"
-    url = "/stm/composers/"
+    url = "/composers/"
     weight = 2
 
   [[menu.main]]
     name = "Alphabetically"
     parent = "composers"
-    url = "/stm/composers/"
+    url = "/composers/"
     weight = 1
 
   [[menu.main]]
     name = "By country of origin"
     parent = "composers"
-    url = "/stm/composers/by-country/"
+    url = "/composers/by-country/"
     weight = 2
 
   [[menu.main]]
     name = "Chronologically"
     parent = "composers"
-    url = "/stm/composers/chronologically/"
+    url = "/composers/chronologically/"
     weight = 3
 
   [[menu.main]]
     name = "By duration"
     parent = "composers"
-    url = "/stm/composers/by-duration/"
+    url = "/composers/by-duration/"
     weight = 4
 
   [[menu.main]]
     name = "Texts"
-    url = "/stm/texts/"
+    url = "/texts/"
     weight = 3
 
   [[menu.main]]
     name = "Translations"
-    url = "/stm/translations/"
+    url = "/translations/"
     weight = 4
 
   [[menu.main]]
     name = "Blog"
-    url = "/stm/blog/"
+    url = "/blog/"
     weight = 5
 
   [[menu.main]]
     name = "Missing CDs"
-    url = "/stm/missing-cds/"
+    url = "/missing-cds/"
     weight = 6
 
   [[menu.main]]
@@ -77,10 +77,10 @@ title = "The Ultimate Stabat Mater Website"
 
   [[menu.main]]
     name = "About"
-    url = "/stm/about/"
+    url = "/about/"
     weight = 8
 
   [[menu.main]]
     name = "Contact"
-    url = "/stm/contact/"
+    url = "/contact/"
     weight = 9
