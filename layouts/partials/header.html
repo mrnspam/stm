@@ -8,7 +8,7 @@
 
 <header class="site-header">
   <a href="/stm/" class="site-logo-link">
-    <img class="site-logo" src="{{ "images/logo.png" | absURL }}" alt="The Ultimate Stabat Mater Website">
+    <img class="site-logo" src="/stm/images/logo.png" alt="The Ultimate Stabat Mater Website">
   </a>
   <a href="/stm/" class="site-title-link">
     <h1 class="site-title">The Ultimate Stabat Mater Website</h1>
@@ -16,16 +16,36 @@
   </a>
 </header>
 
+{{ $banner := "/stm/images/stabatmater-header-475.jpg" }}
+{{ if .Params.banner }}
+  {{ $banner = printf "/stm/images/%s" .Params.banner }}
+{{ else if .Parent }}
+  {{ with .Parent.Params.banner }}
+    {{ $banner = printf "/stm/images/%s" . }}
+  {{ end }}
+{{ end }}
+
 <div class="hero-banner">
-  <img src="{{ "images/hero-banner.jpg" | absURL }}" alt="" class="hero-image">
+  <img src="{{ $banner }}" alt="" class="hero-image">
 </div>
 
 <nav class="main-nav">
   <ul>
     {{ range .Site.Menus.main }}
+    {{ if .HasChildren }}
+    <li class="has-dropdown{{ if strings.HasPrefix $.RelPermalink .URL }} active{{ end }}">
+      <a href="{{ .URL }}">{{ .Name }}</a>
+      <ul class="dropdown">
+        {{ range .Children }}
+        <li><a href="{{ .URL }}"{{ if eq $.RelPermalink .URL }} class="active"{{ end }}>{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </li>
+    {{ else }}
     <li>
       <a href="{{ .URL }}"{{ if eq $.RelPermalink .URL }} class="active"{{ end }}>{{ .Name }}</a>
     </li>
+    {{ end }}
     {{ end }}
   </ul>
 </nav>

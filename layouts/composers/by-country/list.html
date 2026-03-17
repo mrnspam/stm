@@ -1,0 +1,34 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+
+{{ $composers := where .Site.RegularPages "Section" "composers" }}
+{{ $byCountry := dict }}
+{{ range $composers }}
+  {{ $country := .Params.country | default "Unknown" }}
+  {{ $existing := index $byCountry $country | default slice }}
+  {{ $byCountry = merge $byCountry (dict $country (append $existing .)) }}
+{{ end }}
+
+{{ $countries := slice }}
+{{ range $country, $_ := $byCountry }}
+  {{ $countries = append $countries $country }}
+{{ end }}
+{{ $countries = sort $countries }}
+
+{{ range $countries }}
+{{ $country := . }}
+{{ $list := index $byCountry $country }}
+<h2 id="{{ $country | urlize }}">{{ $country }}</h2>
+<ul>
+  {{ range sort $list "Title" "asc" }}
+  {{ $born := .Params.born }}
+  {{ $died := .Params.died }}
+  <li>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ if $born }}({{ $born }}{{ if $died }}–{{ $died }}{{ end }}){{ end }}
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+
+{{ end }}

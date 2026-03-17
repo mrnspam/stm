@@ -26,6 +26,6 @@ Gregor Aichinger, a German composer of religious music, was born in 1564 in Rege
 <tr><th>Performers</th><td>five voices, a cappella</td></tr>
 <tr><th>Length</th><td>3.32 minutes</td></tr>
 <tr><th>Particulars</th><td>Five singing sisters, I love it. Only stanza 1,2,3, 9 and 20 are sung</td></tr>
-<tr><th>Colour bar</th><td><img src="https://stabatmater.info/wp-content/uploads/colorbar/aichinger-580x103.gif" alt="Colour bar Aichinger"></td></tr>
+<tr><th>Colour bar</th><td><img src="/stm/images/colorbar-aichinger.gif" alt="Colour bar Aichinger"></td></tr>
 <tr><th>Textual variations</th><td></td></tr>
 </table>

@@ -1,12 +1,9 @@
 ---
 title: "About"
-menu:
-  main:
-    name: "About"
-    weight: 5
+banner: "banner5.jpg"
 ---
 
-<img src="https://stabatmater.info/wp-content/uploads/2015/02/Hans.jpg" alt="Stabat Mater Foundation" align="right" style="margin:0 0 1rem 1.5rem;">
+<img src="/stm/images/hans.jpg" alt="Stabat Mater Foundation" align="right" style="margin:0 0 1rem 1.5rem;">
 
 Hans van der Velden started collecting Stabat Maters in 1992. After five years, when he owned about 40 Stabat Mater CDs, his partner Hannie van Osnabrugge created the Ultimate Stabat Mater Website with FrontPage. The site contained all his notes on the composer, the composition, the original Latin text, and the translations. Hans continued his search for Stabat Maters, and regularly updated the site with new composers and translations. Via the website Hans came into contact with music lovers, musicians, and composers from all over the world who provided him with new information about compositions and translations. The Stabat Mater collection became one of his passions.
 

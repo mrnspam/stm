@@ -30,13 +30,39 @@ jobs:
       - name: Download images from stabatmater.info
         run: |
           mkdir -p static/images
+          # Logo
           curl -sL -o static/images/logo.png \
             "https://stabatmater.info/wp-content/uploads/2021/02/cropped-cropped-stabat-mater-beeld.png"
-          curl -sL -o static/images/hero-banner.jpg \
+          # Hero banners
+          curl -sL -o static/images/banner-8.jpg \
             "https://stabatmater.info/wp-content/uploads/2021/01/banner-8.jpg"
+          curl -sL -o static/images/banner9.jpg \
+            "https://stabatmater.info/wp-content/uploads/2021/01/banner9.jpg"
+          curl -sL -o static/images/banneri.jpg \
+            "https://stabatmater.info/wp-content/uploads/2021/01/banneri.jpg"
+          curl -sL -o static/images/banner-7.jpg \
+            "https://stabatmater.info/wp-content/uploads/2021/01/banner-7.jpg"
+          curl -sL -o static/images/banner5.jpg \
+            "https://stabatmater.info/wp-content/uploads/2021/01/banner5.jpg"
+          curl -sL -o static/images/stabatmater-header-475.jpg \
+            "https://stabatmater.info/wp-content/uploads/2021/01/stabatmater-header-475.jpg"
+          # Donate banner
           curl -sL -o static/images/donate-banner.jpg \
             "https://stabatmater.info/wp-content/uploads/2025/02/banner-met-tekst-nw-300x175.jpg"
-          echo "Downloaded: $(du -sh static/images/*)"
+          # About page photo
+          curl -sL -o static/images/hans.jpg \
+            "https://stabatmater.info/wp-content/uploads/2015/02/Hans.jpg"
+          # Colour bars
+          curl -sL -o static/images/colorbar-aichinger.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/aichinger-580x103.gif"
+          curl -sL -o static/images/colorbar-abos.gif \
+            "https://stabatmater.info/wp-content/uploads/2014/09/abos-580x147.gif"
+          curl -sL -o static/images/colorbar-pergolesi1.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/pergolesi1.gif"
+          curl -sL -o static/images/colorbar-pergolesi2.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/pergolesi2.gif"
+          echo "Downloaded images:"
+          ls -lh static/images/
 
       - name: Build
         run: hugo --minify

@@ -1,0 +1,51 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+
+{{ $composers := where .Site.RegularPages "Section" "composers" }}
+
+{{ $periods := slice "Medieval" "Renaissance" "Baroque" "Classical" "Romantic" "Modern" "Contemporary" }}
+
+{{ range $periods }}
+{{ $period := . }}
+{{ $list := where $composers "Params.period" $period }}
+{{ if $list }}
+<h2>{{ $period }}</h2>
+<ul>
+  {{ range sort $list "Params.born" "asc" }}
+  {{ $born := .Params.born }}
+  {{ $died := .Params.died }}
+  {{ $country := .Params.country }}
+  <li>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ if $born }}({{ $born }}{{ if $died }}–{{ $died }}{{ end }}){{ end }}
+    {{ if $country }} — {{ $country }}{{ end }}
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+{{ end }}
+
+{{/* Composers not in standard periods */}}
+{{ $stdPeriods := slice "Medieval" "Renaissance" "Baroque" "Classical" "Romantic" "Modern" "Contemporary" }}
+{{ $other := slice }}
+{{ range $composers }}
+  {{ $p := .Params.period | default "" }}
+  {{ if not (in $stdPeriods $p) }}
+    {{ $other = append $other . }}
+  {{ end }}
+{{ end }}
+{{ if $other }}
+<h2>Other</h2>
+<ul>
+  {{ range sort $other "Params.born" "asc" }}
+  {{ $born := .Params.born }}
+  {{ $died := .Params.died }}
+  <li>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ if $born }}({{ $born }}{{ if $died }}–{{ $died }}{{ end }}){{ end }}
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+
+{{ end }}
