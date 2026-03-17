@@ -19,7 +19,9 @@ content/
   missing-cds.md
   texts.md
   translations/
-    _index.md
+    _index.md            ← translations index with links to all languages
+    latin.md             ← original Latin text (Analecta vs Vatican, 20 stanzas)
+    dutch.md             ← 8 Dutch translations (Van der Velden, Wilmink, etc.)
   blog/
     _index.md
     YYYY-MM-DD-title.md  ← one file per blog post
@@ -65,8 +67,15 @@ Array.from(document.querySelectorAll('.entry-content img'))
 python3 scripts/convert_composer.py <slug> /tmp/<slug>.txt \
     --youtube "VIDEO_ID | Title" \
     --colorbar "colorbar-name.gif" \
-    --country "Italy"
+    --country "Italy" \
+    --period "Baroque"
 #    Output: content/composers/<slug>.md
+#
+#    --youtube may be repeated for multiple videos.
+#    For YouTube playlists, use the full videoseries string:
+#      --youtube "videoseries?list=XXXX | Playlist title"
+#    --period values (fixed order for chronological view):
+#      Medieval / Renaissance / Baroque / Classical / Romantic / Modern / Contemporary
 
 # 6. Review, then commit:
 git add content/composers/<slug>.md && git commit -m "Add composer: <name>"
@@ -87,6 +96,7 @@ title: "Firstname Lastname"
 born: 1710          # auto-detected from bio text
 died: 1736          # auto-detected from bio text
 country: "Italy"    # from --country flag or auto-detected
+period: "Baroque"   # from --period flag; used for chronological sort
 banner: "banneri.jpg"   # manuscript banner used for all composer pages
 youtube:
   - url: "https://www.youtube.com/embed/VIDEO_ID?feature=oembed"
@@ -181,9 +191,38 @@ Build time ~35–45 seconds. GitHub Pages source must be set to **"GitHub Action
 
 ---
 
+## Current content (PoC)
+
+### Composers (13)
+
+| Slug | Name | Period | Country |
+|------|------|--------|---------|
+| `giovanni-battista-pergolesi` | Giovanni Battista Pergolesi | Baroque | Italy |
+| `girolamo-abos` | Girolamo Abos | Baroque | Malta |
+| `gregor-aichinger` | Gregor Aichinger | Renaissance | Germany |
+| `antonio-vivaldi` | Antonio Vivaldi | Baroque | Italy |
+| `joseph-haydn` | Joseph Haydn | Classical | Austria |
+| `rossini` | Gioachino Rossini | Romantic | Italy |
+| `verdi` | Giuseppe Verdi | Romantic | Italy |
+| `schubert` | Franz Schubert | Romantic | Austria |
+| `antonin-dvorak` | Antonín Dvořák | Romantic | Czech Republic |
+| `palestrina` | Giovanni Pierluigi da Palestrina | Renaissance | Italy |
+| `poulenc` | Francis Poulenc | Modern | France |
+| `luigi-boccherini` | Luigi Boccherini | Classical | Italy |
+| `scarlatti` | Alessandro Scarlatti | Baroque | Italy |
+| `penderecki` | Krzysztof Penderecki | Contemporary | Poland |
+
+### Translations
+
+| File | Content |
+|------|---------|
+| `latin.md` | Original Latin text — Analecta vs Vatican side-by-side (20 stanzas) |
+| `dutch.md` | 8 Dutch translations (Van der Velden, Wilmink, Nolthenius, Vondel, Gezelle, Vissers, Schulte Nordholt, Bennink Janssonius/Hamers) |
+
+---
+
 ## Known differences from the original (PoC scope)
 
-- Only 3 composers are present (Pergolesi, Abos, Aichinger) as content examples
 - Composer pages use COMPOSERS▾ dropdown in the nav (original uses a hover overlay)
 - No search functionality beyond the A–Z filter on the composers list
-- No Dutch-language version
+- No Dutch-language UI (content translations are present, but the site UI is English-only)
