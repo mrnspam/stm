@@ -61,6 +61,8 @@ jobs:
             "https://stabatmater.info/wp-content/uploads/colorbar/pergolesi1.gif"
           curl -sL -o static/images/colorbar-pergolesi2.gif \
             "https://stabatmater.info/wp-content/uploads/colorbar/pergolesi2.gif"
+          curl -sL -o static/images/vivaldi.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/vivaldi.gif"
           echo "Downloaded images:"
           ls -lh static/images/
 
