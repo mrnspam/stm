@@ -34,24 +34,78 @@ content/
 
 ---
 
-## Adding or editing a composer
+## Adding a composer — systematic conversion
 
-File: `content/composers/firstname-lastname.md`
+Content is converted **deterministically from the original source** using two scripts in `scripts/`. Nothing is LLM-generated.
+
+### Workflow
+
+```bash
+# 1. In Chrome, navigate to the composer page on stabatmater.info
+#    (URL redirects to /componist/ — that is fine)
+
+# 2. Run the Chrome get_page_text MCP tool on the tab.
+#    Save the output verbatim to /tmp/<slug>.txt
+
+# 3. Short JS call in Chrome for YouTube video IDs:
+Array.from(document.querySelectorAll('.entry-content iframe'))
+  .map(f => {
+    var m = (f.getAttribute('src')||'').match(/embed\/([\w-]+)/);
+    return (m ? m[1] : '') + ' | ' + (f.getAttribute('title')||'');
+  }).join('\n')
+#    Note each "VIDEO_ID | Title" line.
+
+# 4. Short JS call for colorbar image filenames:
+Array.from(document.querySelectorAll('.entry-content img'))
+  .filter(i => (i.getAttribute('src')||'').includes('colorbar'))
+  .map(i => i.getAttribute('src').split('/').pop()).join('\n')
+#    Note each filename.
+
+# 5. Run the converter:
+python3 scripts/convert_composer.py <slug> /tmp/<slug>.txt \
+    --youtube "VIDEO_ID | Title" \
+    --colorbar "colorbar-name.gif" \
+    --country "Italy"
+#    Output: content/composers/<slug>.md
+
+# 6. Review, then commit:
+git add content/composers/<slug>.md && git commit -m "Add composer: <name>"
+```
+
+### What the scripts do
+
+| Script | Role |
+|--------|------|
+| `scripts/extract_composer.js` | JS snippet for Chrome DevTools — extracts structured key/value data from the page (alternative to step 2–4 above, useful for shorter pages) |
+| `scripts/convert_composer.py` | Python parser — takes `get_page_text` output + CLI flags and writes Hugo front matter + markdown body, all verbatim from the source |
+
+### Composer front matter reference
 
 ```yaml
 ---
 title: "Firstname Lastname"
-born: 1710
-died: 1736
-country: "Italy"
-period: "Baroque"   # Medieval / Renaissance / Baroque / Classical / Romantic / Modern / Contemporary
-banner: "banner9.jpg"   # optional — inherits from composers/_index.md if omitted
+born: 1710          # auto-detected from bio text
+died: 1736          # auto-detected from bio text
+country: "Italy"    # from --country flag or auto-detected
+banner: "banneri.jpg"   # manuscript banner used for all composer pages
+youtube:
+  - url: "https://www.youtube.com/embed/VIDEO_ID?feature=oembed"
+    title: "Stabat Mater - Name"
+cds:
+  - title: "Label CATNO: Album title"
+    notes: "Free-text notes verbatim from original."
+    orchestra: "Orchestra name"
+    choir: "Choir name"           # optional
+    conductor: "Conductor name"   # optional
+    soloists: "Name, voice; Name, voice"
+    other_works: "Composer: Work; Composer: Work"  # optional
+    code: "YYYY ABC 01"
 ---
 ```
 
-Body is free-form Markdown (verbatim from the original WordPress page). Use `## About the composer` and `## About the Stabat Mater` as section headings. CD recording tables and colour bar images can be included as raw HTML.
+Body uses `## About the composer` and `## About the Stabat Mater` headings. The Stabat Mater section contains a `<table class="stabat-table">` with Date, Performers, Length, Particulars, Colour bar, and Textual variations rows.
 
-> **Important:** `is_index: true` is reserved for the four sorting index pages. Do not add it to real composer pages.
+> **Note:** `is_index: true` is reserved for the four sorting index pages. Do not add it to real composer pages.
 
 ### Sorting views (auto-generated)
 
