@@ -87,6 +87,13 @@ jobs:
             "https://stabatmater.info/wp-content/uploads/colorbar/scarlata.gif"
           curl -sL -o static/images/penderecki.gif \
             "https://stabatmater.info/wp-content/uploads/colorbar/penderecki.gif"
+          # Pre-footer widget images
+          curl -sL -o static/images/youtube.jpg \
+            "https://stabatmater.info/wp-content/uploads/2022/03/youtube.jpg"
+          curl -sL -o static/images/icoon-insta.jpg \
+            "https://stabatmater.info/wp-content/uploads/2022/02/icoon-insta.jpg"
+          curl -sL -o static/images/book-cover.jpg \
+            "https://stabatmater.info/wp-content/uploads/2024/03/voorkant-en-nw-357.jpg"
           echo "Downloaded images:"
           ls -lh static/images/
 

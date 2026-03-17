@@ -4,15 +4,19 @@ description: "The Stabat Mater poem in multiple languages."
 banner: "banneri.jpg"
 ---
 
-So far we have found 24 translations of the Stabat Mater poem, from Latin to Swedish. Thanks to the efforts of devoted visitors from all over the world, the collection keeps growing.
+Originally the Stabat Mater is meant for private reading or praying. It belongs to a group of passion plays called *Marienklagen* (Maria laments), that were very popular in medieval times in Germany and Italy.
 
-- [The original Latin text](/stm/texts/)
+Thanks to many interested and engaged visitors from all over the world, we now have 33 translations of the original Latin Stabat Mater text, from Afrikaans to Welsh.
+
+- [The original Latin text]({{ "translations/latin/" | relURL }})
+- Afrikaans
 - Basque
 - Breton
 - Catalan
+- Croatian
 - Czech
 - Danish
-- Dutch
+- [Dutch]({{ "translations/dutch/" | relURL }})
 - English
 - Finnish
 - French
@@ -33,3 +37,4 @@ So far we have found 24 translations of the Stabat Mater poem, from Latin to Swe
 - Slovakian
 - Spanish
 - Swedish
+- Welsh

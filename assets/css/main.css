@@ -391,3 +391,81 @@ footer a { color: rgba(255,255,255,0.85); }
 /* ── Listen / YouTube embeds ── */
 .listen-video { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 1.2rem; border-radius: 6px; }
 .listen-video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+/* ── Pre-footer widgets ── */
+.pre-footer {
+  background: #b03a1a;
+  color: rgba(255,255,255,0.9);
+  padding: 2.5rem 1.5rem;
+  margin-top: 3rem;
+}
+.pre-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .pre-footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .pre-footer-grid { grid-template-columns: 1fr; }
+}
+.pre-footer-widget h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.7rem;
+}
+.pre-footer-widget a { color: rgba(255,255,255,0.9); text-decoration: none; }
+.pre-footer-widget a:hover { color: white; text-decoration: underline; }
+.pre-footer-widget img {
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.pre-footer-widget p { font-size: 0.85rem; margin: 0; }
+
+/* ── Translation pages ── */
+.translation-page h2 { font-size: 1.1rem; color: var(--green-dark); margin: 1.5rem 0 0.5rem; }
+.translation-stanza-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: serif;
+  font-size: 0.93rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.translation-stanza-table th {
+  background: var(--green-dark);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  font-weight: normal;
+  font-size: 0.82rem;
+  text-align: left;
+}
+.translation-stanza-table td {
+  padding: 0.3rem 0.8rem;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+  white-space: pre-line;
+}
+.translation-stanza-table tr:nth-child(even) td { background: rgba(0,0,0,0.02); }
+.stanza-num { font-size: 0.78rem; color: var(--muted); font-family: sans-serif; padding-right: 0.5rem; width: 1.5rem; }
+.translation-block {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+.translation-block h3 {
+  font-size: 1rem;
+  color: var(--green-dark);
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+.translation-block .stanza { font-family: serif; margin-bottom: 0.8rem; line-height: 1.7; }
+.translation-block .stanza-nr { font-size: 0.78rem; color: var(--muted); font-family: sans-serif; }
