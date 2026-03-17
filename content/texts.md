@@ -31,4 +31,4 @@ The result of this confusion can frequently be found in the CD-booklets. In many
 
 This is a counterpart version of the poem, which describes the joy of Maria after the birth of Jesus. It is clearly based on one of the "Dolorosa"-versions, but the rhyming is certainly not as good. Nevertheless, the "Speciosa" dates back from the fifteenth century and has also been put to music, for instance by Liszt and Diepenbrock.
 
-Read more about the [Stabat Mater Speciosa](https://www.stabatmater.info/stabat-mater/stabat-mater-speciosa-latin-text/).
+Read more about the Stabat Mater Speciosa.
