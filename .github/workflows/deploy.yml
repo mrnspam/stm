@@ -87,6 +87,10 @@ jobs:
             "https://stabatmater.info/wp-content/uploads/colorbar/scarlata.gif"
           curl -sL -o static/images/penderecki.gif \
             "https://stabatmater.info/wp-content/uploads/colorbar/penderecki.gif"
+          curl -sL -o static/images/traetta.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/traetta.gif"
+          curl -sL -o static/images/traetta2.gif \
+            "https://stabatmater.info/wp-content/uploads/colorbar/traetta2.gif"
           # Pre-footer widget images
           curl -sL -o static/images/youtube.jpg \
             "https://stabatmater.info/wp-content/uploads/2022/03/youtube.jpg"
