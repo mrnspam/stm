@@ -77,8 +77,15 @@ python3 scripts/convert_composer.py <slug> /tmp/<slug>.txt \
 #    --period values (fixed order for chronological view):
 #      Medieval / Renaissance / Baroque / Classical / Romantic / Modern / Contemporary
 
-# 6. Review, then commit:
-git add content/composers/<slug>.md && git commit -m "Add composer: <name>"
+# 6. Add colorbar curl lines to .github/workflows/deploy.yml:
+#    For each --colorbar filename.gif, add:
+#      curl -sL -o static/images/<filename>.gif \
+#        "https://stabatmater.info/wp-content/uploads/colorbar/<filename>.gif"
+#    (Check the actual URL via the JS call in step 4 — some colorbars use
+#     a different path, e.g. wp-content/uploads/YYYY/MM/filename.gif)
+
+# 7. Review, then commit both files:
+git add content/composers/<slug>.md .github/workflows/deploy.yml && git commit -m "Add composer: <name>"
 ```
 
 ### What the scripts do
