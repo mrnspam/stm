@@ -263,7 +263,11 @@ def build_front_matter(slug, title, bio_text, meta, cds, youtube, colorbars, cou
     return '\n'.join(lines)
 
 
-def build_body(bio_text, meta, colorbars):
+def build_body(bio_text, section_data):
+    """
+    Build body for one or more Stabat Mater sections.
+    section_data: list of (meta_dict, colorbar_list) — one entry per SM section.
+    """
     lines = []
 
     lines.append('## About the composer')
@@ -271,21 +275,22 @@ def build_body(bio_text, meta, colorbars):
     lines.append(bio_text.strip())
     lines.append('')
 
-    lines.append('## About the Stabat Mater')
-    lines.append('')
-    lines.append('<table class="stabat-table">')
-    for label in ['Date', 'Performers', 'Length', 'Particulars', 'Textual variations']:
-        v = meta.get(label, '').strip()
-        if v:
-            lines.append('<tr><th>' + label + '</th><td>' + v + '</td></tr>')
-    if colorbars:
-        imgs = ' '.join(
-            '<a href="/stm/images/{f}"><img src="/stm/images/{f}" alt="{f}"></a>'.format(f=f)
-            for f in colorbars
-        )
-        lines.append('<tr><th>Colour bar</th><td>' + imgs + '</td></tr>')
-    lines.append('</table>')
-    lines.append('')
+    for meta, colorbars in section_data:
+        lines.append('## About the Stabat Mater')
+        lines.append('')
+        lines.append('<table class="stabat-table">')
+        for label in ['Date', 'Performers', 'Length', 'Particulars', 'Textual variations']:
+            v = meta.get(label, '').strip()
+            if v:
+                lines.append('<tr><th>' + label + '</th><td>' + v + '</td></tr>')
+        if colorbars:
+            imgs = ' '.join(
+                '<a href="/stm/images/{f}"><img src="/stm/images/{f}" alt="{f}"></a>'.format(f=f)
+                for f in colorbars
+            )
+            lines.append('<tr><th>Colour bar</th><td>' + imgs + '</td></tr>')
+        lines.append('</table>')
+        lines.append('')
 
     return '\n'.join(lines)
 
@@ -304,17 +309,33 @@ def convert(slug, raw_text, youtube_args, colorbar_args, country_override, perio
     # --- Bio ---
     bio_text = extract_section(flat, 'About the composer', 'About the Stabat Mater').strip()
 
-    # --- Metadata ---
-    meta_raw = extract_section(flat, 'About the Stabat Mater', 'Colour bar:')
-    if not meta_raw:
-        meta_raw = extract_section(flat, 'About the Stabat Mater', 'Information about the recording')
-    meta = parse_fields(meta_raw, META_FIELDS)
+    # --- Split into one chunk per Stabat Mater section ---
+    # Each chunk is the text after 'About the Stabat Mater' up to the next occurrence
+    sm_chunks = flat.split('About the Stabat Mater')[1:]  # skip everything before first
 
-    # --- CD section ---
-    cd_text = extract_section(flat, 'Information about the recording', ' Listen')
-    if not cd_text:
-        cd_text = extract_section(flat, 'Information about the recording', '\nListen')
-    cds = parse_cds(cd_text) if cd_text else []
+    colorbars = [c.strip() for c in colorbar_args if c.strip()]
+
+    all_cds = []
+    section_data = []  # list of (meta_dict, colorbar_list_for_this_section)
+
+    for i, chunk in enumerate(sm_chunks):
+        # Meta: everything before 'Colour bar:' or 'Information about the recording'
+        if 'Colour bar:' in chunk:
+            meta_raw = chunk[:chunk.find('Colour bar:')]
+        elif 'Information about the recording' in chunk:
+            meta_raw = chunk[:chunk.find('Information about the recording')]
+        else:
+            meta_raw = chunk
+        meta = parse_fields(meta_raw, META_FIELDS)
+
+        # CDs: between 'Information about the recording' and ' Listen'
+        cd_text = extract_section(chunk, 'Information about the recording', ' Listen')
+        section_cds = parse_cds(cd_text) if cd_text else []
+        all_cds.extend(section_cds)
+
+        # Assign colorbars in order: one per section
+        cb = [colorbars[i]] if i < len(colorbars) else []
+        section_data.append((meta, cb))
 
     # --- YouTube (from CLI) ---
     youtube = []
@@ -329,12 +350,10 @@ def convert(slug, raw_text, youtube_args, colorbar_args, country_override, perio
             url = 'https://www.youtube.com/embed/' + vid + '?feature=oembed'
         youtube.append({'url': url, 'title': yt_title})
 
-    colorbars = [c.strip() for c in colorbar_args if c.strip()]
-
     front_matter = build_front_matter(
-        slug, title, bio_text, meta, cds, youtube, colorbars, country_override, period_override
+        slug, title, bio_text, {}, all_cds, youtube, [], country_override, period_override
     )
-    body = build_body(bio_text, meta, colorbars)
+    body = build_body(bio_text, section_data)
     return front_matter + '\n\n' + body
 
 
@@ -366,9 +385,11 @@ def main():
 
     # Summary
     flat = re.sub(r'\s+', ' ', strip_header(raw_text))
-    cd_count = len(re.findall(r'\bCD\d+:\s', flat))
+    sm_count = flat.count('About the Stabat Mater')
+    cd_count = len(re.findall(r'\bCD\d*:\s', flat))
     print('Written : ' + output_file)
     print('YouTube : ' + str(len(args.youtube)) + ' entries')
+    print('SM sects: ' + str(sm_count) + ' detected')
     print('CDs     : ' + str(cd_count) + ' detected')
 
 
