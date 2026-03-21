@@ -91,6 +91,33 @@ jobs:
             "https://stabatmater.info/wp-content/uploads/colorbar/traetta.gif"
           curl -sL -o static/images/traetta2.gif \
             "https://stabatmater.info/wp-content/uploads/colorbar/traetta2.gif"
+          # Composer portraits (400px thumbnails from Wikimedia Commons)
+          curl -sL -o static/images/pergolesi-portrait.jpg \
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Giovanni_Battista_Pergolesi.jpg/400px-Giovanni_Battista_Pergolesi.jpg"
+          curl -sL -o static/images/vivaldi-portrait.jpg \
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Vivaldi.jpg/400px-Vivaldi.jpg"
+          curl -sL -o static/images/haydn-portrait.jpg \
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Joseph_Haydn.jpg/400px-Joseph_Haydn.jpg"
+          curl -sL -o static/images/rossini-portrait.jpg \
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Rossini_young-circa-1815.jpg/400px-Rossini_young-circa-1815.jpg"
+          curl -sL -o static/images/verdi-portrait.jpg \
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Giuseppe_Verdi_by_Ferdinand_Mulnier_BW.jpg/400px-Giuseppe_Verdi_by_Ferdinand_Mulnier_BW.jpg"
+          curl -sL -o static/images/schubert-portrait.jpg \
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Franz_Schubert_by_Wilhelm_August_Rieder_1875.jpg/400px-Franz_Schubert_by_Wilhelm_August_Rieder_1875.jpg"
+          curl -sL -o static/images/dvorak-portrait.jpg \
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Dvorak.jpg/400px-Dvorak.jpg"
+          curl -sL -o static/images/palestrina-portrait.jpg \
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Giovanni_Pierluigi_da_Palestrina.jpg/400px-Giovanni_Pierluigi_da_Palestrina.jpg"
+          curl -sL -o static/images/poulenc-portrait.jpg \
+            "https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/Poulenc-1922.jpg/400px-Poulenc-1922.jpg"
+          curl -sL -o static/images/boccherini-portrait.jpg \
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Portrait_de_Luigi_Boccherini%2C_1814_%28cropped%29.jpg/400px-Portrait_de_Luigi_Boccherini%2C_1814_%28cropped%29.jpg"
+          curl -sL -o static/images/scarlatti-portrait.jpg \
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Alessandro_Scarlatti.jpg/400px-Alessandro_Scarlatti.jpg"
+          curl -sL -o static/images/penderecki-portrait.jpg \
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Krzysztof_Penderecki_20080706.jpg/400px-Krzysztof_Penderecki_20080706.jpg"
+          curl -sL -o static/images/traetta-portrait.jpg \
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Tommaso_traetta.jpg/400px-Tommaso_traetta.jpg"
           # Pre-footer widget images
           curl -sL -o static/images/youtube.jpg \
             "https://stabatmater.info/wp-content/uploads/2022/03/youtube.jpg"

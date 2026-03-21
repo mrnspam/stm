@@ -5,6 +5,7 @@ died: 1904
 country: "Czech Republic"
 period: "Romantic"
 banner: "banneri.jpg"
+portrait: "dvorak-portrait.jpg"
 youtube:
   - url: "https://www.youtube.com/embed/muqTH0ZWdPs?feature=oembed"
     title: "Stabat Mater Foundation - Antonín Dvořák (2002)"

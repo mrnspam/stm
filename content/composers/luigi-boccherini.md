@@ -5,6 +5,7 @@ died: 1805
 country: "Italy"
 period: "Classical"
 banner: "banneri.jpg"
+portrait: "boccherini-portrait.jpg"
 youtube:
   - url: "https://www.youtube.com/embed/LrM9_ionKjg?feature=oembed"
     title: "Stabat Mater - Luigi Boccherini (1781, soprano and strings)"

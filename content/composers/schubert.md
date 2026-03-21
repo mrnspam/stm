@@ -5,6 +5,7 @@ died: 1828
 country: "Austria"
 period: "Romantic"
 banner: "banneri.jpg"
+portrait: "schubert-portrait.jpg"
 youtube:
   - url: "https://www.youtube.com/embed/9-JLYU0jadI?feature=oembed"
     title: "Stabat Mater Foundation - Franz Schubert (2006)"

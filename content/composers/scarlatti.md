@@ -5,6 +5,7 @@ died: 1725
 country: "Italy"
 period: "Baroque"
 banner: "banneri.jpg"
+portrait: "scarlatti-portrait.jpg"
 youtube:
   - url: "https://www.youtube.com/embed/eKEp72EcnsM?feature=oembed"
     title: "Stabat Mater - Alessandro Scarlatti"

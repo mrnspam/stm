@@ -4,6 +4,7 @@ born: 1678
 died: 1741
 country: "Italy"
 banner: "banneri.jpg"
+portrait: "vivaldi-portrait.jpg"
 youtube:
   - url: "https://www.youtube.com/embed/QcNyOyO6Yc4?feature=oembed"
     title: "Stabat Mater - Antonio Vivaldi"

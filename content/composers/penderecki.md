@@ -4,6 +4,7 @@ born: 1933
 country: "Poland"
 period: "Contemporary"
 banner: "banneri.jpg"
+portrait: "penderecki-portrait.jpg"
 youtube:
   - url: "https://www.youtube.com/embed/w3HXqTUi0ys?feature=oembed"
     title: "Stabat Mater Foundation - Krzysztof Penderecki (2007)"

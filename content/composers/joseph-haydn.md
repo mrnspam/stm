@@ -5,6 +5,7 @@ died: 1809
 country: "Austria"
 period: "Classical"
 banner: "banneri.jpg"
+portrait: "haydn-portrait.jpg"
 youtube:
   - url: "https://www.youtube.com/embed/A5sAqvoOt_I?feature=oembed"
     title: "Stabat Mater Foundation - Franz Joseph Haydn (2014)"

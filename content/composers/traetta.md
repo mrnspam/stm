@@ -5,6 +5,7 @@ died: 1779
 country: "Italy"
 period: "Classical"
 banner: "banneri.jpg"
+portrait: "traetta-portrait.jpg"
 youtube:
   - url: "https://www.youtube.com/embed/w80XtEcDZm8?feature=oembed"
     title: "Stabat Mater   Tommaso Traetta"

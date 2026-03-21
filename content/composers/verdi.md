@@ -5,6 +5,7 @@ died: 1901
 country: "Italy"
 period: "Romantic"
 banner: "banneri.jpg"
+portrait: "verdi-portrait.jpg"
 youtube:
   - url: "https://www.youtube.com/embed/JDaoYw_09xQ?feature=oembed"
     title: "Stabat Mater Foundation - Giuseppe Verdi (1999)"
