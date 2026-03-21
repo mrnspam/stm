@@ -5,7 +5,7 @@ died: 1963
 country: "France"
 period: "Modern"
 banner: "banneri.jpg"
-portrait: "poulenc-portrait.jpg"
+portrait: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/Poulenc-1922.jpg/300px-Poulenc-1922.jpg"
 cds:
   - title: "Decca 448 139-2: Poulenc – Gloria – Stabat Mater"
     notes: "Dedicated to sacred choral works of Poulenc. Recorded at La Salle Wagram, Paris, in December 1994."

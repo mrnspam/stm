@@ -5,7 +5,7 @@ died: 1868
 country: "Italy"
 period: "Romantic"
 banner: "banneri.jpg"
-portrait: "rossini-portrait.jpg"
+portrait: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Rossini_young-circa-1815.jpg/300px-Rossini_young-circa-1815.jpg"
 youtube:
   - url: "https://www.youtube.com/embed/videoseries?list=PLusFCki9uuLnTniK9hiF94Yl2tYJzDbBZ"
     title: "Stabat Mater Foundation | 1998 - 2018"

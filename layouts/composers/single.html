@@ -4,7 +4,7 @@
 
   {{ with .Params.portrait }}
   <figure class="composer-portrait">
-    <img src="{{ "/stm/images/" | relURL }}{{ . }}" alt="{{ $.Title }}">
+    <img src="{{ . }}" alt="{{ $.Title }}">
     <figcaption>© Wikimedia Commons</figcaption>
   </figure>
   {{ end }}

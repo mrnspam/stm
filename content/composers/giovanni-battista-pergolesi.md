@@ -6,7 +6,7 @@ country: "Italy"
 period: "Baroque"
 forces: "soprano, alto, three violins, cello, organ"
 banner: "banneri.jpg"
-portrait: "pergolesi-portrait.jpg"
+portrait: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Giovanni_Battista_Pergolesi.jpg/300px-Giovanni_Battista_Pergolesi.jpg"
 youtube:
   - url: "https://www.youtube.com/embed/videoseries?list=PLusFCki9uuLml6ZJgmDIwS3bA2895pyem"
     title: "Stabat Mater - Pergolesi"
