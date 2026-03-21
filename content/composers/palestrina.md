@@ -5,7 +5,7 @@ died: 1594
 country: "Italy"
 period: "Renaissance"
 banner: "banneri.jpg"
-portrait: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Giovanni_Pierluigi_da_Palestrina.jpg/300px-Giovanni_Pierluigi_da_Palestrina.jpg"
+portrait: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Giovanni_Pierluigi_da_Palestrina.jpg/330px-Giovanni_Pierluigi_da_Palestrina.jpg"
 youtube:
   - url: "https://www.youtube.com/embed/wvjdW1-3YZs?feature=oembed"
     title: "Giovanni Pierluigi Palestrina"
